@@ -9,6 +9,7 @@ page_str = soup.find('nav', {'aria-label' : 'pagination'}).get_text()
 if "..." in page_str:
     frst = page_str.find("...")
     page_counts = int(page_str[(frst+3):])
+    print(page_counts)
 else:
     page_counts = int(page_str[-1:])
 
